@@ -1,0 +1,28 @@
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card rounded-0">
+                <div class="card-header">
+                    <h3 class="mb-0">Login</h3>
+                </div>
+                  <div class="card-body bg">
+                        <form class="form-container" [formGroup]="loginForm">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" class="la">Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"  placeholder="please enter email" formControlName="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" class="la">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"  placeholder="please enter password" formControlName="password">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1" class="la">Remember me</label>
+                        </div>
+                        <button type="button" [disabled]="!loginForm.valid" class="btn btn-success btn-block" (click)="login()">Login</button>
+                        </form>
+                    </div>
+             </div>    
+        </div>
+    </div>    
+</div>

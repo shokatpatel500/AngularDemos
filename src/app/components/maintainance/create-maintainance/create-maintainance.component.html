@@ -1,0 +1,95 @@
+<p-panel header="Maintainence" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
+    <p-card>
+<div class="container">
+    <div class="row">
+      <form [formGroup]="maintainenceform">
+
+          <div class="form-group" >
+              <label for="month">Select Month:</label>
+              <select class="form-control" formControlName="month">
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+              
+              <p *ngIf="!maintainenceform.get('month').valid && maintainenceform.get('month').touched">choose one color of your vehicle</p>
+            </div>
+    
+          <div class="form-group">
+              <label for="block">Select Block:</label>
+              <select class="form-control" formControlName="block">
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+                <option>D</option>
+                <option>E</option>
+                <option>F</option>
+              </select>
+              <p *ngIf="!maintainenceform.get('block').valid && maintainenceform.get('block').touched">choose one color of your vehicle</p>
+            </div>
+            <div class="float-right">
+                <button type="button" class="btn btn-primary" (click)="ongetmaintainencedata()">Get Maintainence Data</button> 
+              </div>
+      </form>
+
+      
+<br><br><br><br>
+          <div class="container">
+            <h4>User Maintainence Data</h4>
+                      
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Firstname</th>
+                  <th>Lastname</th>
+                  <th>Flatno</th>
+                  <th>Email</th>
+                  <th>Paid</th>
+                  
+                </tr>
+              </thead>
+              <tbody *ngFor="let user of userdata">
+                <tr>
+                  <td>{{user.firstname}}</td>
+                  <td>{{user.lastname}}</td>
+                  <td>{{user.flatno}}</td>
+                  <td>{{user.email}}</td>
+                  <div *ngFor="let data of user.maintainence">
+                      <td>{{data.ispaid}}</td>
+                  </div>
+                  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </div>
+    </div>
+    <p-footer>
+        @Sudarshan-Colony
+    </p-footer>
+</p-card>
+</p-panel>
+
+<div class="container vh-100">
+  <div class="d-flex flex-column align-items-center">
+     <div class="p-1">
+        <video #video class="vid" controls></video>
+     </div>
+     <div class="pb-2">
+        <button class="btn btn-primary" (click)="capture()">Capture Image</button>
+     </div>
+     <div class="p-1">
+        <canvas #canvas class="vid"></canvas>
+     </div>
+  </div>
+</div>
+

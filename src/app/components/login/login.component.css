@@ -1,0 +1,6 @@
+.bg{background: url('../../../assets/images/sudharshan.jpg') no-repeat; width: 100wh; height: 100vh;}
+.form-container{border: 0px solid;padding: 50px 60px;
+    -webkit-box-shadow: 7px 10px 39px 13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 10px 39px 13px rgba(0,0,0,0.75);
+    box-shadow: 7px 10px 39px 13px rgba(0,0,0,0.75); }
+.la{color:greenyellow;}

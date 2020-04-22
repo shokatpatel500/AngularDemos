@@ -1,0 +1,38 @@
+li {
+    display: inline;
+    padding: 5px;
+}
+.vid {
+    width: 10%;
+    height: 10%;
+    vertical-align: top;
+}
+.bg{background-color:violet;}
+.fo{font: icon;}
+
+/* hide the icons in the file upload button bar */
+.ui-fileupload-buttonbar .ui-icon {
+    display: none;
+}
+
+/* adjust the padding of all buttons inside the file upload button bar */
+.ui-fileupload-buttonbar .ui-button-text-icon-left .ui-button-text {
+    font-size: 0.8em;
+    padding: 0 0.2em;
+}
+
+/* unstyle the file upload button bar background */
+.ui-fileupload-buttonbar.ui-widget-header {
+    background-color: transparent;
+    border: 0 none;
+}
+
+/* increase fileupload button spacing between 'choose' and 'upload' */
+.ui-fileupload-buttonbar .ui-fileupload-choose {
+    margin-right: 10em;
+}
+
+/* remove the border of file upload content list */
+.ui-fileupload-content {
+    border: 0 none;
+}

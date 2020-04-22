@@ -1,0 +1,85 @@
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card rounded-0">
+                <div class="card-header">
+                    <h3 class="mb-0">Register</h3>
+                </div>
+                  <div class="card-body bg">
+                      
+                        <form class="form-container" [formGroup]="registerForm">
+
+                            <div class="container">
+                                <div class="row">
+                                        <div class="col-sm-4">
+                                                <label  for="Firstname" class="la">Firstname</label>
+                                                <input type="text"  id="Firstname" placeholder="Firstname" formControlName="firstName">
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <label  for="Lastname" class="la">Lastname</label>
+                                            <input type="text"  id="Lastname" placeholder="Lastname" formControlName="lastName">
+                                        </div>
+                                        
+                                    
+                                        <div class="col-sm-4">
+                                                <label for="exampleInputEmail1" class="la">Email</label>
+                                                <input type="email"  id="exampleInputEmail1"  placeholder="email" formControlName="email">
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <label for="exampleInputPassword1" class="la">Password</label>
+                                            <input type="password"  id="exampleInputPassword1"  placeholder="password" formControlName="password" >
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                            <label for="buildingName" class="la">Buildingname</label>
+                                            <input type="text"  id="buildingName"  placeholder="buildingName" formControlName="buildingName" >
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                            <label for="flatNo" class="la">FlatNo</label>
+                                            <input type="text"  id="flatNo"  placeholder="flatNo" formControlName="flatNo" >
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                            <label for="department" class="la">Department</label>
+                                            <input type="text"  id="department"  placeholder="department" formControlName="department" >
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                            <label for="designation" class="la">Designation</label>
+                                            <input type="text"  id="designation"  placeholder="designation" formControlName="designation" >
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                            <label for="phoneNo" class="la">PhoneNo</label>
+                                            <input type="number"  id="phoneNo"  placeholder="phoneNo" formControlName="phoneNo" >
+                                        </div>
+
+                          
+                            </div>
+                        </div><br>
+                                
+                                <div class="col text-center">
+                                <button type="button" [disabled]="!registerForm.valid" class="btn btn-success" (click)="register()">Register</button>&
+                                <button type="button" class="btn btn-danger" (click)="reset()">Reset</button>
+                               </div>
+                                <!-- <button pButton type="button" class="ui-button-success" (click)=" register()">Register</button> -->
+                        </form>
+                    </div>
+             </div>    
+        </div>
+    </div>    
+</div>
+
+<!-- <form class="form-inline">
+    <div class="form-group mr-2">
+        <label class="sr-only" for="inputEmail">Email</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+    </div>
+    <div class="form-group mr-2">
+        <label class="sr-only" for="inputPassword">Password</label>
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Sign in</button>
+</form> -->

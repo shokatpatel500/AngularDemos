@@ -1,0 +1,44 @@
+
+<p-panel header="Search Visitors" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
+    <p-card>
+        <form [formGroup]=" searchformGroup" class="bg">
+            <div class="float-right">
+                <button pButton type="button" label="Create-Visitors" routerLink="/visitors" class="ui-button-success"></button>&nbsp;&nbsp;
+            </div>
+           <div class="container">
+               <div class="row">
+               
+                   <div class="col-lg-4">
+                    <label  for="Firstname">Firstname:</label>&nbsp;<br>
+                    <!-- <input type="text" pInputText placeholder="Firstname" formControlName="firstName"/> --> 
+                    <p-autoComplete formControlName="firstName" [suggestions]="results" (completeMethod)="search($event)" ></p-autoComplete>
+                   </div>
+
+                   <div class="col-lg-4">
+                    <label for="adharNo">AdharNo:</label>&nbsp;<br>
+                    <input type="number" pInputText placeholder="AdharNo" formControlName="adharNo"/>
+                   </div>
+
+                   <div class="col-lg-4">
+                    <label for="BikeNo">BikeNo:</label>&nbsp;<br>
+                    <input type="text" pInputText placeholder="BikeNo" formControlName="bikeNo"/>
+                   </div>
+
+               </div>
+           </div>
+           <div class="float-right">
+            <button pButton type="button" (click)=" onCancle()" label="Cancle"  class="ui-button-warning"></button>
+         </div>
+           <div class="float-right">
+            <button pButton type="button" label="Search"  class="ui-button-success" (click)="onSearchVisitors()"></button>&nbsp;&nbsp;
+        </div>
+
+         <div>
+            <ng2-smart-table [settings]="settings" [source]="searchVisitors" (custom)="onCustomAction($event)"></ng2-smart-table>
+         </div>
+        </form>
+        <p-footer>
+            @Sudarshan-Colony
+        </p-footer>
+    </p-card>
+</p-panel>

@@ -1,0 +1,80 @@
+<p-panel header="Edit-Visitors-Registrations" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
+    <p-card > 
+         <form [formGroup]="signupform">
+             <div class="container" class="bg">
+                 <div class="row">
+                     <div class="col-lg-4">
+                         <label  for="Firstname">Firstname:</label>&nbsp;<br>
+                         <!-- <input type="text" id="Firstname" placeholder="Firstname" formControlName="firstName"> -->
+                         <input type="text" pInputText placeholder="Firstname" formControlName="firstName"/>
+                     </div>
+                 <div class="col-lg-4">
+                         <label  for="Lastname">Lastname:</label>&nbsp;<br>
+                         <!-- <input type="text"  id="Lastname" placeholder="Lastname" formControlName="lastName"> -->
+                         <input type="text" pInputText placeholder="Firstname" formControlName="lastName"/>
+                 </div>
+                         
+                 <div class="col-lg-4">
+                         <label for="birthdate">birthdate:</label>&nbsp;<br>
+                         <p-calendar [showIcon]="true" formControlName="birthDate" placehoder ></p-calendar>
+                 </div>
+ 
+                         
+                 <div class="col-lg-4">
+                     <label for="adharNo">AdharNo:</label>&nbsp;<br>
+                     <input type="number" pInputText placeholder="AdharNo" formControlName="adharNo"/>
+                 </div>
+ 
+                 <div class="col-lg-4">
+                     <label for="visitingDate">VisitingDate:</label>&nbsp;<br>
+                     <p-calendar [showIcon]="true" formControlName="visitingDate" placehoder="visitingDate" ></p-calendar>
+                 </div>
+ 
+                 <!-- <div class="col-lg-4">
+                             <label for="visitingDate">Upload Photo:</label>&nbsp;<br>
+                             <p-fileUpload name="picture"  (onUpload)="onUpload($event)" 
+                             multiple="multiple" accept="image/*" maxFileSize="1000000">
+                 </div> -->
+                 <div class="col-lg-4">
+                     <label for="picture">Upload Photo:</label>&nbsp;<br>
+                     <p-fileUpload mode="basic" name="picture"  accept="image/*" maxFileSize="1000000" (onUpload)="onUpload($event)" class="fo"></p-fileUpload>
+                 </div>
+ 
+                 <div class="col-lg-4">
+                     <label for="flatblock">flatblock:</label>&nbsp;<br>
+                     <input type="text" pInputText placeholder="flatblock" formControlName="flatblock"/>
+                 </div>
+ 
+                 <div class="col-lg-4">
+                     <label for="flatno">flatno:</label>&nbsp;<br>
+                     <input type="number" pInputText placeholder="flatno" formControlName="flatno"/>
+                 </div>
+ 
+                 <div class="col-lg-4">
+                     <label for="phoneNo">phoneNo:</label>&nbsp;<br>
+                     <input type="number" pInputText placeholder="phoneNo" formControlName="phoneNo"/>
+                 </div>
+ 
+                 <div class="col-lg-4">
+                     <label for="BikeNo">BikeNo:</label>&nbsp;<br>
+                     <input type="text" pInputText placeholder="BikeNo" formControlName="bikeNo"/>
+                 </div>
+ 
+                 
+             </div>
+         </div>
+                 <div class="float-right">
+                    <button pButton type="button" (click)=" onCancle()" label="Cancle"  class="ui-button-warning"></button>
+                 </div>
+                 <div class="float-right">
+                     <button pButton type="button" label="Reset"  class="ui-button-danger" (click)="onReset()"></button>
+                 </div>&nbsp;&nbsp;
+                 <div class="float-right">
+                     <button pButton type="button" label="Save"  class="ui-button-success" (click)="registerVisitors()"></button>
+                 </div>&nbsp;&nbsp;
+         </form> 
+         <p-footer>
+             @Sudarshan-Colony
+         </p-footer>
+    </p-card>
+ </p-panel>

@@ -1,0 +1,44 @@
+<p-panel header="Edit-Vehicals" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
+    <p-card>
+        <div class="container">
+            <form [formGroup]="editvehicleform">
+              <div class="container">
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Vehicle type:</label>
+                  <input type="text" class="form-control"  placeholder="eg.car,bike,other" formControlName="vehicletype">
+                  <p *ngIf="!editvehicleform.get('vehicletype').valid && editvehicleform.get('vehicletype').touched">enter vehicle type</p>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Vehicle registration no:</label>
+                    <input type="text" class="form-control"  placeholder="eg.gj-03-1234" formControlName="vehicleregistrationno">
+                    <p *ngIf="!editvehicleform.get('vehicleregistrationno').valid && editvehicleform.get('vehicleregistrationno').touched">enter vehicle registration number</p>
+                  </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Vehicle Color:</label>
+                  <select class="form-control" formControlName="vehiclecolor">
+                    <option>Black</option>
+                    <option>Red</option>
+                    <option>Gray</option>
+                    <option>Yellow</option>
+                    <option>White</option>
+                  </select>
+                  <p *ngIf="!editvehicleform.get('vehiclecolor').valid && editvehicleform.get('vehiclecolor').touched">choose one color of your vehicle</p>
+                  
+                </div>
+                
+                <div class="float-right">
+                    <button pButton type="button" label="Save"  class="ui-button-success" (click)="onsubmit()"></button>&nbsp;&nbsp;
+                    <button pButton type="button" label="Reset" class="ui-button-danger" (click)="onReset()"></button>&nbsp;&nbsp;
+                    <button pButton type="button" label="Cancle" class="ui-button-warning" (click)="onCancle()"></button>
+                    <!-- <div class="form-group">
+                        <button type="submit" class="btn btn-primary" (click)="onsubmit()" [disabled]="!addvehicleform.valid">Add</button>
+                    </div> -->
+               </div>
+              </div>
+              </form>
+            </div>
+         <p-footer>
+             @Sudarshan-Colony
+         </p-footer>
+     </p-card>   
+ </p-panel>   
