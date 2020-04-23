@@ -53,4 +53,8 @@ searchVisitors(search){
 getVisitors(){
   return this.http.get(this.url + '/getvisitors')
 }
+
+getVisitorsById(VisitorsId){
+  return this.http.post(this.url +'/getvisistors/',VisitorsId)
+}
 }

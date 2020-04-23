@@ -60,7 +60,6 @@ export class SearchVisitorsComponent implements OnInit {
         this.router.navigate(['/viewvisitors'])
         break;
      case 'edit':
-       
       this.router.navigate(['/editvisitors'])
     }
   }
